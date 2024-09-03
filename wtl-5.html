@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding-right: 150px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://w0.peakpx.com/wallpaper/242/668/HD-wallpaper-calculator-glasses-cactus-aesthetics-red.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            max-width: 400px; 
+            width: 100%; 
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://localhost:4000/calculate">
+        Enter first number:
+        <input type="number" id="n1" name="n1"><br><br>
+        Enter second number:
+        <input type="number" id="n2" name="n2"><br><br>
+        
+        Select your choice:
+        <select id="operation" name="operation">
+            <option value="">Choose an operation</option>
+            <option value="addition">Addition</option>
+            <option value="subtraction">Subtraction</option>
+            <option value="multiplication">Multiplication</option>
+            <option value="division">Division</option>
+            <option value="modulus">Modulus</option>
+            <option value="exponent">Exponent</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
